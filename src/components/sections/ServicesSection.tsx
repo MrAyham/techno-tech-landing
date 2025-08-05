@@ -10,8 +10,6 @@ import {
   Workflow,
   Bot,
   Globe,
-  BarChart3,
-  Smartphone,
   LucideIcon,
 } from 'lucide-react';
 
@@ -37,16 +35,6 @@ const services: Service[] = [
     title: 'Web Platforms & Dashboards',
     description: 'Creating modern, fast and responsive platforms with admin panels.',
   },
-  {
-    icon: BarChart3,
-    title: 'Data Visualization & Reporting',
-    description: 'Interactive dashboards and insights powered by real-time data.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile-ready Interfaces',
-    description: 'UI/UX optimized for all screen sizes.',
-  },
 ];
 
 const ServicesSection: FC = () => (
@@ -68,10 +56,11 @@ const ServicesSection: FC = () => (
             key={service.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -5 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="h-full dark:bg-gray-800">
+            <Card className="h-full bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-gray-800">
               <CardHeader className="space-y-4 text-center">
                 <Icon className="mx-auto h-10 w-10 text-[#6d071a]" />
                 <CardTitle className="text-gray-900 dark:text-white">
