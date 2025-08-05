@@ -1,7 +1,5 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
- codex/install-framer-motion-or-aos
-
 import { Bot } from 'lucide-react';
 main
 
