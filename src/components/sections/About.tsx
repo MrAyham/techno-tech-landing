@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { Bot } from 'lucide-react';
-main
 
 const About: FC = () => (
   <motion.section
