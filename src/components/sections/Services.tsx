@@ -24,22 +24,22 @@ const services = [
 ];
 
 const Services: FC = () => (
-  <section className="py-16 bg-gray-50">
-    <div className="max-w-5xl mx-auto text-center mb-12 px-4">
-      <h2 className="text-3xl font-semibold mb-4">What We Offer</h2>
-      <p className="text-gray-600">
+  <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <div className="mx-auto mb-12 max-w-5xl px-4 text-center">
+      <h2 className="mb-4 text-3xl font-semibold text-gray-900 dark:text-white">What We Offer</h2>
+      <p className="text-gray-600 dark:text-gray-300">
         From automation to custom software, we build tools that transform how businesses operate.
       </p>
     </div>
-    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
       {services.map((service) => (
         <div
           key={service.title}
-          className="relative p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-transform hover:-translate-y-1"
+          className="relative rounded-lg bg-white p-6 shadow-lg transition-transform hover:-translate-y-1 hover:shadow-2xl dark:bg-gray-800"
         >
-          <div className="text-4xl mb-4">{service.icon}</div>
-          <h3 className="mb-2 font-bold">{service.title}</h3>
-          <p className="text-gray-600">{service.description}</p>
+          <div className="mb-4 text-4xl">{service.icon}</div>
+          <h3 className="mb-2 font-bold text-gray-900 dark:text-white">{service.title}</h3>
+          <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
         </div>
       ))}
     </div>

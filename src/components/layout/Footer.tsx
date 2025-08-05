@@ -9,24 +9,27 @@ const links = [
 ];
 
 const Footer: FC = () => (
-  <footer className="mt-24 bg-[#0f0f0f] text-gray-400 font-sans">
+  <footer className="mt-24 bg-gray-100 text-gray-600 dark:bg-[#0f0f0f] dark:text-gray-400">
     <div className="mx-auto max-w-7xl px-6 py-12">
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Techno Tech logo" className="h-8" />
-          <span className="font-semibold text-white">Techno Tech</span>
+          <span className="font-semibold text-gray-900 dark:text-white">Techno Tech</span>
         </div>
         <ul className="flex flex-col items-center gap-4 md:flex-row">
           {links.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="transition-colors hover:text-white">
+              <a
+                href={link.href}
+                className="transition-colors hover:text-gray-900 dark:hover:text-white"
+              >
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
       </div>
-      <p className="mt-8 text-center text-sm text-gray-500">
+      <p className="mt-8 text-center text-sm text-gray-500 dark:text-gray-500">
         © 2025 Techno Tech Inc. All rights reserved.
       </p>
     </div>
