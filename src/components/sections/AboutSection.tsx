@@ -27,11 +27,9 @@ const AboutSection: FC = () => {
           viewport={{ once: true, amount: 0.8 }}
           transition={{ duration: 0.6 }}
         >
-          <img
-            src="https://via.placeholder.com/400x300"
-            alt="About us"
-            className="w-full h-auto rounded-lg object-cover"
-          />
+          <div className="flex h-[300px] w-full items-center justify-center rounded-lg bg-gray-200 text-gray-500">
+            <span>Image coming soon</span>
+          </div>
         </motion.div>
       </div>
     </section>

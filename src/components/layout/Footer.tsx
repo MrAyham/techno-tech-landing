@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import logo from '../../assets/logo.svg';
 
 const links = [
   { label: 'Home', href: '#' },
@@ -13,8 +12,14 @@ const Footer: FC = () => (
     <div className="mx-auto max-w-7xl px-6 py-8">
       <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
         <div className="flex items-center gap-2">
-          <img src={logo} alt="Techno Tech logo" className="h-8" />
-          <span className="font-semibold text-gray-900 dark:text-white">Techno Tech</span>
+          <img
+            src="/assets/logo-techno-tech.png"
+            alt="Techno Tech logo"
+            className="h-8"
+          />
+          <span className="font-semibold text-gray-900 dark:text-white">
+            Techno Tech
+          </span>
         </div>
         <ul className="flex flex-col items-center gap-4 md:flex-row">
           {links.map((link) => (
