@@ -9,7 +9,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/hero';
-import About from '@/components/sections/About';
+import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import CTA from '@/components/sections/cta';
 import Contact from '@/components/sections/contact';
@@ -32,7 +32,7 @@ codex/create-ctasection-component
         <Header />
       </div>
       <Hero />
-      <About />
+      <AboutSection />
       <ServicesSection />
       <CTA />
       <Contact />
