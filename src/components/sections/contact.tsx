@@ -13,7 +13,7 @@ const Contact: FC = () => {
   };
 
   return (
-    <section className="py-16 flex justify-center">
+    <section id="contact" className="py-16 flex justify-center">
       <div className="w-full max-w-md bg-gray-50 p-6 rounded-lg shadow-md">
         {submitted ? (
           <p className="text-center text-green-600">Message sent successfully!</p>

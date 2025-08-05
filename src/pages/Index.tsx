@@ -1,6 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
+import Hero from '@/components/sections/hero';
 import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
 import CTA from '@/components/sections/cta';
