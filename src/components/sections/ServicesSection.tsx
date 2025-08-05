@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
@@ -82,7 +81,6 @@ const ServicesSection: FC = () => (
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent />
             </Card>
           </motion.div>
         );
