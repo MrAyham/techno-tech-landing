@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
 
 import Button from '../ui/Button';
 import Input from '../ui/Input';
@@ -51,7 +52,14 @@ const Contact: FC = () => {
   };
 
   return (
-    <section id="contact" className="flex justify-center py-16 bg-white dark:bg-gray-900">
+    <motion.section
+      id="contact"
+      className="flex justify-center py-16 bg-white dark:bg-gray-900"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="w-full max-w-md rounded-lg bg-gray-50 p-6 shadow-md dark:bg-gray-800">
         {submitted ? (
           <p className="text-center text-green-600">Message sent successfully!</p>
@@ -125,7 +133,7 @@ const Contact: FC = () => {
           </>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

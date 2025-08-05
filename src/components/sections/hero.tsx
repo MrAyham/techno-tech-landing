@@ -24,7 +24,8 @@ const Hero: FC = () => {
           <motion.h1
             className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl"
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             Revolutionize Your Business
@@ -34,14 +35,16 @@ const Hero: FC = () => {
           <motion.p
             className="text-lg font-medium text-gray-200 md:text-xl"
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
             Techno Tech helps businesses automate, innovate, and grow using smart AI tools, dashboards, and custom web platforms.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <MotionButton
@@ -55,7 +58,8 @@ const Hero: FC = () => {
         </div>
         <motion.div
           initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.8 }}
           className="relative"
         >
