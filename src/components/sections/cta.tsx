@@ -1,41 +1,34 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
+import { motion } from 'framer-motion';
+import Button from '../ui/Button';
 
 const CTA: FC = () => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(t);
-  }, []);
+  const handleClick = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section className="bg-gradient-to-r from-[#111] to-[#1a1a1a] py-20">
-      <div
-        className={`max-w-xl mx-auto px-4 text-center transition-all duration-700 ${
-          visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}
+    <section className="px-4 py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-br from-[#3b030d] via-[#6d071a] to-[#b49e61] p-12 text-center text-white shadow-xl"
       >
-        <h3 className="mb-4 text-3xl font-semibold text-white">
-          Ready to level up your business?
+        <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
+          <span className="mr-2">💡</span>Ready to unlock your business potential?
         </h3>
-        <p className="mb-8 text-gray-300">
-          Let's build something extraordinary together.
+        <p className="mb-8 text-lg">
+          Let Techno Tech help you scale faster, smarter, and with less effort.
         </p>
-        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="#"
-            className="rounded-lg bg-indigo-600 px-6 py-3 text-lg font-medium text-white transition-transform hover:scale-105 hover:shadow-lg"
-          >
-            📞 Book a Free Consultation
-          </a>
-          <a
-            href="#"
-            className="rounded-lg border border-indigo-500 px-6 py-3 text-lg font-medium text-indigo-500 transition-colors hover:bg-indigo-500 hover:text-white"
-          >
-            📨 Send us a message
-          </a>
-        </div>
-      </div>
+        <Button
+          onClick={handleClick}
+          className="rounded-xl bg-[#6d071a] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#540515]"
+        >
+          Start Your Project 🚀
+        </Button>
+      </motion.div>
     </section>
   );
 };
