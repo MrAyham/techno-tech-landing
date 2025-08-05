@@ -13,21 +13,18 @@ const testimonials = [
   {
     name: 'Sarah M.',
     role: 'Business Owner',
-    avatar: 'https://via.placeholder.com/64',
     text:
       'Techno Tech transformed our operations with their automation solutions. The team was supportive from start to finish and delivered beyond expectations.',
   },
   {
     name: 'John D.',
     role: 'Startup Founder',
-    avatar: 'https://via.placeholder.com/64',
     text:
       'Working with Techno Tech has been a game changer for our startup. Their expertise helped us streamline processes and focus on growth.',
   },
   {
     name: 'Emily R.',
     role: 'Marketing Lead',
-    avatar: 'https://via.placeholder.com/64',
     text:
       'The custom tools they built saved us countless hours. Their attention to detail and commitment to quality are unmatched.',
   },
@@ -49,11 +46,9 @@ const TestimonialsSection: FC = () => (
         >
           <Card className="h-full">
             <CardHeader className="flex flex-col items-center text-center">
-              <img
-                src={t.avatar}
-                alt={t.name}
-                className="mb-4 h-16 w-16 rounded-full object-cover"
-              />
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-200 text-xl font-semibold text-gray-500">
+                {t.name.charAt(0)}
+              </div>
               <CardTitle>{t.name}</CardTitle>
               <CardDescription>{t.role}</CardDescription>
               <div className="mt-2 flex gap-1">

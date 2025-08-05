@@ -12,24 +12,20 @@ import Button from '@/components/ui/Button';
 interface Project {
   title: string;
   description: string;
-  image: string;
 }
 
 const projects: Project[] = [
   {
     title: 'Project Alpha',
     description: 'An innovative solution for task management.',
-    image: 'https://via.placeholder.com/400x250',
   },
   {
     title: 'Beta Dashboard',
     description: 'Modern dashboard for tracking metrics and analytics.',
-    image: 'https://via.placeholder.com/400x250',
   },
   {
     title: 'Gamma Platform',
     description: 'A scalable e-commerce platform built for growth.',
-    image: 'https://via.placeholder.com/400x250',
   },
 ];
 
@@ -54,11 +50,9 @@ const PortfolioSection: FC = () => (
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
           <Card className="h-full overflow-hidden bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-gray-800">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-40 w-full object-cover"
-            />
+            <div className="flex h-40 w-full items-center justify-center bg-gray-200 text-gray-500">
+              <span>Project image</span>
+            </div>
             <CardHeader>
               <CardTitle className="text-gray-900 dark:text-white">
                 {project.title}

@@ -14,7 +14,14 @@ const Header: FC = () => {
 
   return (
     <header className="flex items-center justify-between py-4">
-      <h1 className="text-xl font-bold">Techno Tech</h1>
+      <div className="flex items-center gap-2">
+        <img
+          src="/assets/logo-techno-tech.png"
+          alt="Techno Tech logo"
+          className="h-8"
+        />
+        <h1 className="text-xl font-bold">Techno Tech</h1>
+      </div>
       <div className="flex items-center gap-4">
         <button
           aria-label="Toggle Dark Mode"
