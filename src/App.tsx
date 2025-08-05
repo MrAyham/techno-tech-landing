@@ -1,5 +1,5 @@
 import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
+import Footer from './components/layout/footer';
 import Hero from './components/sections/Hero';
 
 function App() {
