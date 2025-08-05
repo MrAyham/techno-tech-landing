@@ -4,8 +4,9 @@ import Hero from '@/components/sections/hero';
 import About from '@/components/sections/About';
 import ServicesSection from '@/components/sections/ServicesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import CallToAction from '@/components/sections/CallToAction';
+import FaqSection from '@/components/sections/FaqSection';
 import Contact from '@/components/sections/contact';
+import CallToAction from '@/components/sections/CallToAction';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <About />
       <ServicesSection />
       <TestimonialsSection />
-      <CallToAction />
+      <FaqSection />
       <Contact />
+      <CallToAction />
       <div className="mx-auto max-w-7xl px-4">
         <Footer />
       </div>
