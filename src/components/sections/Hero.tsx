@@ -11,12 +11,10 @@ const Hero: FC = () => {
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 text-white">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 px-6 py-20">
-        <div className={`flex-1 text-center md:text-left transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI-Powered Solutions for Modern Businesses</h1>
-          <p className="mb-8 text-lg max-w-xl mx-auto md:mx-0">
-            We help small and medium businesses scale faster using automation, AI, and digital platforms tailored to their needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
+          <div className={`flex-1 text-center md:text-left transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">🚀 Empower Your Business with Smart AI Solutions</h1>
+            <p className="mb-8 text-lg max-w-xl mx-auto md:mx-0">⚡ Techno Tech Inc – Canada’s Elite Automation Partner</p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
             <Button className="shadow-lg hover:shadow-xl">Request a Demo</Button>
             <Button variant="secondary" className="shadow-lg hover:shadow-xl">Learn More</Button>
           </div>
