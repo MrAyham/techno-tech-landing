@@ -1,7 +1,7 @@
 import Header from '@/components/layout/Header';
 import Hero from '@/components/sections/hero';
 import About from '@/components/sections/About';
-import Services from '@/components/sections/Services';
+import ServicesSection from '@/components/sections/ServicesSection';
 import Contact from '@/components/sections/contact';
 
 function Index() {
@@ -12,7 +12,7 @@ function Index() {
       </div>
       <Hero />
       <About />
-      <Services />
+      <ServicesSection />
       <Contact />
     </>
   );
