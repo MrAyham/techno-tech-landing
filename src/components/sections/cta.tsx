@@ -1,10 +1,16 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 
 const CTA: FC = () => {
+  const contactSection = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    contactSection.current = document.getElementById('contact');
+  }, []);
+
   const handleClick = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    contactSection.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
