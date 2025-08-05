@@ -1,11 +1,3 @@
- m666wy-codex/create-servicessection-component
-
-codex/create-ctasection-component
-import Index from './pages/Index';
-import CTASection from '@/components/sections/CTASection';
-import Footer from '@/components/layout/Footer';
-
- main
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/hero';
@@ -13,21 +5,11 @@ import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import CTA from '@/components/sections/cta';
 import Contact from '@/components/sections/contact';
-m666wy-codex/create-servicessection-component
-
-main
- main
+import CallToAction from '@/components/sections/CallToAction';
 
 function App() {
   return (
     <>
- m666wy-codex/create-servicessection-component
-
-codex/create-ctasection-component
-      <Index />
-      <CTASection />
-
- main
       <div className="max-w-7xl mx-auto px-4">
         <Header />
       </div>
@@ -36,10 +18,7 @@ codex/create-ctasection-component
       <ServicesSection />
       <CTA />
       <Contact />
- m666wy-codex/create-servicessection-component
-
- main
-main
+      <CallToAction />
       <div className="max-w-7xl mx-auto px-4">
         <Footer />
       </div>
