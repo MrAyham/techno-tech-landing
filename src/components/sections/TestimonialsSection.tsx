@@ -1,26 +1,33 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 const testimonials = [
   {
     name: 'Sarah M.',
     role: 'Business Owner',
-    initial: 'S',
+    avatar: 'https://via.placeholder.com/64',
     text:
       'Techno Tech transformed our operations with their automation solutions. The team was supportive from start to finish and delivered beyond expectations.',
   },
   {
     name: 'John D.',
     role: 'Startup Founder',
-    initial: 'J',
+    avatar: 'https://via.placeholder.com/64',
     text:
       'Working with Techno Tech has been a game changer for our startup. Their expertise helped us streamline processes and focus on growth.',
   },
   {
     name: 'Emily R.',
     role: 'Marketing Lead',
-    initial: 'E',
+    avatar: 'https://via.placeholder.com/64',
     text:
       'The custom tools they built saved us countless hours. Their attention to detail and commitment to quality are unmatched.',
   },
@@ -42,11 +49,18 @@ const TestimonialsSection: FC = () => (
         >
           <Card className="h-full">
             <CardHeader className="flex flex-col items-center text-center">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-red-800 to-amber-500 text-2xl font-bold text-white">
-                {t.initial}
-              </div>
+              <img
+                src={t.avatar}
+                alt={t.name}
+                className="mb-4 h-16 w-16 rounded-full object-cover"
+              />
               <CardTitle>{t.name}</CardTitle>
               <CardDescription>{t.role}</CardDescription>
+              <div className="mt-2 flex gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 dark:text-gray-300">{t.text}</p>
