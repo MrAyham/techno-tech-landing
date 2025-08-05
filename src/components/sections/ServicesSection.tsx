@@ -38,7 +38,14 @@ const services: Service[] = [
 ];
 
 const ServicesSection: FC = () => (
-  <section id="services" className="py-16 bg-gray-50 dark:bg-gray-900">
+  <motion.section
+    id="services"
+    className="py-16 bg-gray-50 dark:bg-gray-900"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
     <div className="mx-auto mb-12 max-w-5xl px-4 text-center">
       <h2 className="mb-4 text-3xl font-semibold text-gray-900 dark:text-white">
         What We Do
@@ -75,7 +82,7 @@ const ServicesSection: FC = () => (
         );
       })}
     </div>
-  </section>
+  </motion.section>
 );
 
 export default ServicesSection;
