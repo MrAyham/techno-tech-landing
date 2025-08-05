@@ -1,5 +1,8 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
+29vrtp-codex/add-servicessection-component
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+
 import {
   Card,
   CardHeader,
@@ -8,8 +11,8 @@ import {
 } from '@/components/ui/card';
 
 v1kezo-codex/add-servicessection-component
+main
 
-m666wy-codex/create-servicessection-component
 interface Service {
   title: string;
   description: string;
@@ -18,9 +21,9 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: 'Web Applications Development',
+    title: 'Smart Web Platforms',
     description:
-      'Custom websites & dashboards built with React, Next.js, and modern UI tools.',
+      'We design and build tailored web apps that automate business tasks and boost efficiency.',
     icon: (
       <svg
         className="h-10 w-10 text-[#6d071a]"
@@ -31,15 +34,16 @@ const services: Service[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10" />
       </svg>
     ),
   },
   {
-    title: 'Business Automation Systems',
+    title: 'Business Automation',
     description:
-      'We digitize your workflows using AI, APIs, and low-code platforms like Make & Notion.',
+      'From invoices to inventory, we build AI-powered tools that save time and reduce errors.',
     icon: (
       <svg
         className="h-10 w-10 text-[#6d071a]"
@@ -50,19 +54,17 @@ const services: Service[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="6" cy="6" r="3" />
-        <circle cx="18" cy="6" r="3" />
-        <circle cx="6" cy="18" r="3" />
-        <path d="M9 6h6" />
-        <path d="M6 9v6" />
-        <path d="M9 18h8" />
+        <rect x="8" y="3" width="8" height="4" rx="1" />
+        <rect x="8" y="17" width="8" height="4" rx="1" />
+        <path d="M12 7v10" />
+        <path d="M5 11h14" />
       </svg>
     ),
   },
   {
     title: 'AI Integration & Consulting',
     description:
-      'We embed smart AI into your business to reduce cost, increase speed, and delight your users.',
+      'Unlock the power of artificial intelligence in your business with our custom solutions.',
     icon: (
       <svg
         className="h-10 w-10 text-[#6d071a]"
@@ -73,16 +75,16 @@ const services: Service[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M12 3c-1.657 0-3 1.343-3 3v.5C8.333 6.167 7.667 6 7 6c-1.657 0-3 1.343-3 3v6c0 1.657 1.343 3 3 3 0 1.657 1.343 3 3 3s3-1.343 3-3c0 1.657 1.343 3 3 3s3-1.343 3-3-1.343-3-3-3c1.657 0 3-1.343 3-3V9c0-1.657-1.343-3-3-3-.667 0-1.333.167-2 .5V6c0-1.657-1.343-3-3-3Z" />
+        <path d="M12 3a5 5 0 0 0-5 5v1a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a5 5 0 0 0 10 0v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V8a5 5 0 0 0-5-5Z" />
       </svg>
     ),
   },
 ];
 
 const ServicesSection: FC = () => (
-  <section id="services" className="py-16">
+  <section id="services" className="py-16 bg-white">
     <div className="container mx-auto px-4">
-      <h2 className="mb-12 text-center text-3xl font-semibold">Our Smart Services</h2>
+      <h2 className="mb-12 text-center text-3xl font-semibold">What We Do</h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {services.map((service, index) => (
           <motion.div
@@ -90,9 +92,17 @@ const ServicesSection: FC = () => (
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800"
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
+ 29vrtp-codex/add-servicessection-component
+            <Card className="h-full">
+              <CardHeader className="space-y-4 text-center">
+                {service.icon}
+                <CardTitle>{service.title}</CardTitle>
+                <CardDescription>{service.description}</CardDescription>
+              </CardHeader>
+            </Card>
+
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 dark:bg-gray-700">
               {service.icon}
             </div>
@@ -157,6 +167,7 @@ const ServicesSection: FC = () => (
             <p className="text-gray-600">{description}</p>
 main
 main
+ main
           </motion.div>
         ))}
       </div>
@@ -165,6 +176,8 @@ main
 );
 
 export default ServicesSection;
+29vrtp-codex/add-servicessection-component
+
 
  v1kezo-codex/add-servicessection-component
 // Inline Lucide-style icons
@@ -292,3 +305,4 @@ v1kezo-codex/add-servicessection-component
 main
       main
 main
+ main
