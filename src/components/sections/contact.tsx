@@ -13,14 +13,14 @@ const Contact: FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 flex justify-center">
-      <div className="w-full max-w-md bg-gray-50 p-6 rounded-lg shadow-md">
+    <section id="contact" className="flex justify-center py-16 bg-white dark:bg-gray-900">
+      <div className="w-full max-w-md rounded-lg bg-gray-50 p-6 shadow-md dark:bg-gray-800">
         {submitted ? (
           <p className="text-center text-green-600">Message sent successfully!</p>
         ) : (
           <>
-            <h3 className="mb-2 text-center text-2xl font-semibold">Get in Touch</h3>
-            <p className="mb-6 text-center text-gray-600">
+            <h3 className="mb-2 text-center text-2xl font-semibold text-gray-900 dark:text-white">Get in Touch</h3>
+            <p className="mb-6 text-center text-gray-600 dark:text-gray-300">
               We’d love to hear from you. Whether you’re curious about features, a free trial, or even press—we’re ready to answer any and all questions.
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -36,7 +36,7 @@ const Contact: FC = () => {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" required rows={4} placeholder="Your message" />
               </div>
-              <Button type="submit" className="shadow-sm hover:shadow-md transition-shadow">Send Message</Button>
+              <Button type="submit" className="shadow-sm transition-shadow hover:shadow-md">Send Message</Button>
             </form>
           </>
         )}
