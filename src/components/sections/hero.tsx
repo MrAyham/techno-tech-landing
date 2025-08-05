@@ -1,53 +1,71 @@
 import { FC } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Button from '../ui/Button';
+import heroIllustration from '../../assets/hero-illustration.svg';
+
+const MotionButton = motion(Button);
 
 const Hero: FC = () => {
-  const { scrollY } = useScroll();
-  const yBg1 = useTransform(scrollY, [0, 300], [0, 60]);
-  const yBg2 = useTransform(scrollY, [0, 300], [0, -60]);
-
   return (
-    <section className="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-black via-[#3b030d] to-[#b49e61] text-white">
-      {/* Decorative Layers */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-black via-[#3b030d] to-[#b49e61] text-white">
       <motion.div
-        style={{ y: yBg1 }}
-        className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#6d071a]/40 blur-3xl"/>
-      <motion.div
-        style={{ y: yBg2 }}
-        className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#b49e61]/30 blur-3xl"/>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 max-w-3xl px-6 text-center"
-      >
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-6xl font-bold mb-6"
-          style={{ textShadow: '0 0 25px rgba(255,255,255,0.6)' }}
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-20"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }}
+        animate={{ backgroundPosition: ['0 0', '40px 40px'] }}
+        transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+      />
+      <div className="container mx-auto grid items-center gap-16 px-6 py-24 md:grid-cols-2 md:py-32">
+        <div className="space-y-8 rounded-xl bg-black/30 p-8 backdrop-blur-md md:p-10">
+          <motion.h1
+            className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Revolutionize Your Business
+            <br />
+            with Intelligent Tech Solutions.
+          </motion.h1>
+          <motion.p
+            className="text-lg font-medium text-gray-200 md:text-xl"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
+            Techno Tech helps businesses automate, innovate, and grow using smart AI tools, dashboards, and custom web platforms.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <MotionButton
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#b49e61] text-black hover:bg-[#d4c584]"
+            >
+              Let's Build Together 🚀
+            </MotionButton>
+          </motion.div>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="relative"
         >
-          We Build Smart Systems for Bold Businesses
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="mb-8 text-lg text-gray-200"
-        >
-          Techno Tech delivers tailor-made automation & AI-powered platforms to fuel your business growth.
-        </motion.p>
-        <motion.a
-          href="#contact"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="inline-block px-8 py-4 rounded-md font-semibold bg-[#6d071a] hover:bg-[#540515] shadow-lg hover:shadow-xl transition-colors"
-        >
-          Start Your Transformation
-        </motion.a>
-      </motion.div>
+          <img
+            src={heroIllustration}
+            alt="AI-driven dashboard and automation illustration"
+            className="mx-auto w-full max-w-md"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 };
