@@ -1,12 +1,16 @@
 export const safeAddEventListener = (
-  e: EventTarget | null,
+  e: unknown,
   t: string,
   n: EventListenerOrEventListenerObject,
   r?: boolean | AddEventListenerOptions,
 ) => {
-  if (e && 'addEventListener' in e) {
-    e.addEventListener(t, n, r);
-    return () => (e as EventTarget).removeEventListener(t, n, r);
+  if (e && typeof (e as any).addEventListener === 'function') {
+    (e as any).addEventListener(t, n, r);
+    return () => {
+      if (typeof (e as any).removeEventListener === 'function') {
+        (e as any).removeEventListener(t, n, r);
+      }
+    };
   }
   return () => {
     /* noop */

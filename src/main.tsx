@@ -21,7 +21,7 @@ if (typeof document !== 'undefined') {
     renderApp();
   } else {
     safeAddEventListener(
-      typeof window !== 'undefined' ? window : null,
+      typeof document !== 'undefined' ? document : null,
       'DOMContentLoaded',
       renderApp,
     );

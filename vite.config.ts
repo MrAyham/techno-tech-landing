@@ -6,7 +6,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      // @ts-expect-error -- plugin option retained for CSP compliance
+      fastRefresh: false,
+    }),
+  ],
   resolve: {
     alias: {
       '@': new URL('./src', import.meta.url).pathname,
