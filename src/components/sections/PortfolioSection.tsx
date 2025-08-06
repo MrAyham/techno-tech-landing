@@ -50,9 +50,11 @@ const PortfolioSection: FC = () => (
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
           <Card className="h-full overflow-hidden bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-gray-800">
-            <div className="flex h-40 w-full items-center justify-center bg-gray-200 text-gray-500">
-              <span>Project image</span>
-            </div>
+            <img
+              src="/assets/logo-techno-tech.png"
+              alt="Techno Tech logo"
+              className="h-40 w-full object-contain bg-gray-200 p-4"
+            />
             <CardHeader>
               <CardTitle className="text-gray-900 dark:text-white">
                 {project.title}

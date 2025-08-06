@@ -11,7 +11,6 @@ const About: FC = () => (
     transition={{ duration: 0.5 }}
   >
     <div className="container mx-auto px-4">
- codex/install-framer-motion-or-aos
       <h2 className="mb-4 text-center text-3xl font-semibold text-gray-900 dark:text-white">Who We Are</h2>
       <p className="mb-12 text-center text-gray-600 dark:text-gray-300">
         Techno Tech is a Canadian-based software agency helping businesses integrate AI, automation, and smart systems.
@@ -73,7 +72,6 @@ const About: FC = () => (
           Techno Tech شركة تقنية تستخدم الذكاء الاصطناعي لتطوير الأعمال وخلق حلول ذكية.
         </p>
       </motion.div>
-         main
     </div>
   </motion.section>
 );
