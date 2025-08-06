@@ -15,8 +15,25 @@ const renderApp = () => {
   }
 };
 
+const safeAddEventListener = (
+  e: EventTarget | null,
+  t: string,
+  n: EventListenerOrEventListenerObject,
+  r?: boolean | AddEventListenerOptions,
+) => {
+  if (e) {
+    e.addEventListener(t, n, r);
+    return () => e.removeEventListener(t, n);
+  }
+  return () => {};
+};
+
 if (document.readyState !== 'loading') {
   renderApp();
 } else {
-  window.addEventListener('DOMContentLoaded', renderApp);
+  safeAddEventListener(
+    typeof window !== 'undefined' ? window : null,
+    'DOMContentLoaded',
+    renderApp,
+  );
 }
