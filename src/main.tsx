@@ -16,12 +16,14 @@ const renderApp = () => {
   }
 };
 
-if (document.readyState !== 'loading') {
-  renderApp();
-} else {
-  safeAddEventListener(
-    typeof window !== 'undefined' ? window : null,
-    'DOMContentLoaded',
-    renderApp,
-  );
+if (typeof document !== 'undefined') {
+  if (document.readyState !== 'loading') {
+    renderApp();
+  } else {
+    safeAddEventListener(
+      typeof window !== 'undefined' ? window : null,
+      'DOMContentLoaded',
+      renderApp,
+    );
+  }
 }
