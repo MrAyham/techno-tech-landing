@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
+import { safeAddEventListener } from './utils/safeEventListener';
 
 // Safely render the app only after the DOM is ready
 const renderApp = () => {
@@ -13,19 +14,6 @@ const renderApp = () => {
       </React.StrictMode>,
     );
   }
-};
-
-const safeAddEventListener = (
-  e: EventTarget | null,
-  t: string,
-  n: EventListenerOrEventListenerObject,
-  r?: boolean | AddEventListenerOptions,
-) => {
-  if (e) {
-    e.addEventListener(t, n, r);
-    return () => e.removeEventListener(t, n);
-  }
-  return () => {};
 };
 
 if (document.readyState !== 'loading') {
