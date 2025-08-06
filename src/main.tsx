@@ -20,10 +20,6 @@ if (typeof document !== 'undefined') {
   if (document.readyState !== 'loading') {
     renderApp();
   } else {
-    safeAddEventListener(
-      typeof window !== 'undefined' ? window : null,
-      'DOMContentLoaded',
-      renderApp,
-    );
+    safeAddEventListener(document, 'DOMContentLoaded', renderApp);
   }
 }
