@@ -19,11 +19,7 @@ const renderApp = () => {
 if (typeof document !== 'undefined') {
   if (document.readyState !== 'loading') {
     renderApp();
-  } else {
-    safeAddEventListener(
-      typeof window !== 'undefined' ? window : null,
-      'DOMContentLoaded',
-      renderApp,
-    );
+  } else if (typeof window !== 'undefined') {
+    safeAddEventListener(window, 'DOMContentLoaded', renderApp);
   }
 }
