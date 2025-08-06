@@ -5,10 +5,12 @@ const Header: FC = () => {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
+    const root = typeof document !== 'undefined' ? document.documentElement : null;
+    if (!root) return;
     if (dark) {
-      document.documentElement.classList.add('dark');
+      root.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      root.classList.remove('dark');
     }
   }, [dark]);
 
